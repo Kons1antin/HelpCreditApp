@@ -72,13 +72,17 @@ class AnnuitPay():
     def percent_pay(self):
         return (self.pay_bank() * 100) / self.all_sum
 
-
-    def calc_reduc_pay(self) -> float:
+    # Уменьшение ежемесячного платежа
+    def calc_reduc_pay(self):
         p = (self.annual_rate / 100) / 12
-        target = self.month_pay() - GetDate().get_date_reduce_pay()
+        target = self.month_pay() - GetDate().get_date_reduce_pay()[0]
 
-        new_summ = target / (p + (p /(((1 + p) ** self.period) - 1)))
-        return  new_summ
+        if GetDate().get_date_reduce_pay()[1] == 0:
+            new_summ = target / (p + (p /(((1 + p) ** self.period) - 1)))
+
+        else: new_summ = target / (p + (p /(((1 + p) ** GetDate().get_date_reduce_pay()[1]) - 1)))
+
+        return  self.all_sum - new_summ, target
 
 
 

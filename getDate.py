@@ -30,6 +30,9 @@ class GetDate():
         # На какую сумму плательщик желает уменьшить ежемесячный платёж -> integer
         reduce_pay = 3000
 
-        return reduce_pay
+        # Сколкьо платежей осталось
+        remains_pay = 0
+
+        return reduce_pay,remains_pay
 
 
