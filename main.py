@@ -23,10 +23,16 @@ def main():
     # ShowDeffPay().show_pay_bank()
     # ShowDeffPay().show_percent_pay()
 
+    # ShowAnnuitPay().show_month_pay()
+    # ShowAnnuitPay().show_pay_all_time()
+    # ShowAnnuitPay().show_pay_bank()
+    # ShowAnnuitPay().show_percent_pay()
+
     ShowAnnuitPay().show_month_pay()
     ShowAnnuitPay().show_pay_all_time()
-    ShowAnnuitPay().show_pay_bank()
-    ShowAnnuitPay().show_percent_pay()
+    ShowAnnuitPay().show_reduc_pay()
+    #ShowAnnuitPay().show_reduc_period()
+
 
 if __name__ == '__main__':
     main()

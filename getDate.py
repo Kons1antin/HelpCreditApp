@@ -25,7 +25,7 @@ class GetDate():
         return all_sum,period,annual_rate,type_pay, credit_metgod
 
 
-    def get_date_reduce_pay(self) -> int:
+    def get_date_reduce_pay(self):
 
         # На какую сумму плательщик желает уменьшить ежемесячный платёж -> integer
         reduce_pay = 3000
@@ -34,5 +34,15 @@ class GetDate():
         remains_pay = 0
 
         return reduce_pay,remains_pay
+
+    def get_date_reduce_period(self):
+
+        #Срок за каторый плательщик желает погасить кредит -> integer
+        desired_period = 20
+
+        # Сколько платежей было совершено по старым условиям -> integer
+        old_period_pay = 0
+
+        return desired_period, old_period_pay
 
 

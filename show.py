@@ -51,3 +51,12 @@ class ShowAnnuitPay():
 
     def show_percent_pay(self) -> None:
         print(f'Процент выплаченный банку от общей суммы: {round(AnnuitPay(self.summ,self.per,self.ann).percent_pay(),1)} %')
+
+    def show_reduc_pay(self)-> None:
+        print(f'Ежежмесячная сумма выплат будет составлять: {round(AnnuitPay(self.summ,self.per,self.ann).calc_reduc_pay()[1],2)} руб')
+        print(f'Взнос банку составит: {round(AnnuitPay(self.summ,self.per,self.ann).calc_reduc_pay()[0],2)} руб')
+        print(f'Общая сумма выплат составит: {round(AnnuitPay(self.summ,self.per,self.ann).calc_reduc_pay()[2],2)} руб')
+
+    def show_reduc_period(self)-> None:
+        print(f'Ежежмесячная сумма выплат будет составлять: {round(AnnuitPay(self.summ,self.per,self.ann).calc_reduc_period()[0],2)} руб')
+        print(f'Общая сумма переплаты банку: {round(AnnuitPay(self.summ,self.per,self.ann).calc_reduc_period()[1],2)} руб')
